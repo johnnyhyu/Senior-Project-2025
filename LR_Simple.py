@@ -9,7 +9,7 @@ import requests
 import random
 
 #Load data from csv file
-input_file = r"C:\Users\johnn\Downloads\e_word_counts.csv"
+input_file = r"C:\Users\johnn\Downloads\cry_word_counts.csv"
 df = pd.read_csv(input_file, header=None)
 df.columns = ['embedding', 'label']
 def parse(row):
@@ -67,7 +67,7 @@ for epoch in range(n_epochs):
 
 # set model to evaluation mode
 model.eval()
-test_file = r"C:\Users\johnn\Downloads\test_e_word_counts.csv"
+test_file = r"C:\Users\johnn\Downloads\test_cry_word_counts.csv"
 testdf = pd.read_csv(test_file, header=None)
 testdf.columns = ['embedding', 'label']
 
@@ -92,16 +92,6 @@ performance on sample:
     accuracy                           0.43       306
    macro avg       0.42      0.43      0.41       306
 weighted avg       0.46      0.43      0.43       306
-
-              precision    recall  f1-score   support
-
-        down       0.33      0.12      0.17        60
-   no change       0.56      0.69      0.62       165
-          up       0.40      0.40      0.40        81
-
-    accuracy                           0.50       306
-   macro avg       0.43      0.40      0.40       306
-weighted avg       0.47      0.50      0.47       306
 
 performance on test:
               precision    recall  f1-score   support
